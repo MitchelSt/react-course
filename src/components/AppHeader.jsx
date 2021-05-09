@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function AppHeader() {
-  return <>AppHeader</>;
+  return (
+    <>
+      <h1>AppHeader</h1>
+    </>
+  );
 }
