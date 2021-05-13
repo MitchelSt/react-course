@@ -1,6 +1,8 @@
 import { useState } from "react";
 import CalculationOverview from "./components/CalculationOverview";
 import Input from "./components/Input";
+import MultipliedByTwo from "./components/MultipliedByTwo";
+import MultipliedCalculations from "./components/MultipliedCalculations";
 
 export default function App() {
   const [inputValue, setInputValue] = useState(0);
@@ -11,7 +13,11 @@ export default function App() {
 
       <Input setInputValue={setInputValue} />
 
-      <CalculationOverview inputValue={inputValue} />
+      <CalculationOverview>
+        <MultipliedCalculations>
+          <MultipliedByTwo inputValue={inputValue} />
+        </MultipliedCalculations>
+      </CalculationOverview>
     </>
   );
 }
