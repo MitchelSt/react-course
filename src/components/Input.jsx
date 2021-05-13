@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { InputValueContext } from "../context/InputValueContext";
 
-export default function Input({ setInputValue }) {
+export default function Input() {
+  const { dispatch } = useContext(InputValueContext);
+
   return (
     <>
-      <input type="number" onChange={(e) => setInputValue(e.target.value)} />
+      <input
+        type="number"
+        onChange={(e) =>
+          dispatch({ type: "SET_INPUT_VALUE", payload: e.target.value })
+        }
+      />
     </>
   );
 }
