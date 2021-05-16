@@ -1,10 +1,10 @@
 import React from "react";
 import MultipliedCalculations from "./MultipliedCalculations";
 
-export default function CalculationOverview({ inputValue }) {
+export default function CalculationOverview() {
   return (
     <>
-      <MultipliedCalculations inputValue={inputValue} />
+      <MultipliedCalculations />
     </>
   );
 }

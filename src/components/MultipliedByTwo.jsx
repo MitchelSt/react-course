@@ -1,10 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
-export default function MultipliedByTwo({ inputValue }) {
-  console.log(inputValue);
+export default function MultipliedByTwo() {
+  const count = useSelector((state) => state.count.value);
+
   return (
     <>
-      <p>Multiplied number: {inputValue * 2}</p>
+      <p>Multiplied number: {count * 2}</p>
     </>
   );
 }
