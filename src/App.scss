@@ -1,0 +1,7 @@
+.header {
+  color: red;
+
+  @media (max-width: 768px) {
+    color: green;
+  }
+}
