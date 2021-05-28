@@ -1,10 +1,10 @@
 import React from "react";
-import "./HeaderComponent.scss";
+import styles from "./HeaderComponent.module.scss";
 
 export default function HeaderComponent() {
   return (
     <>
-      <h1 className="header">HeaderComponent</h1>
+      <h1 className={styles.header}>HeaderComponent</h1>
     </>
   );
 }

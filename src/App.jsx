@@ -1,4 +1,4 @@
-import "./App.scss";
+import styles from "./App.module.scss";
 import HeaderComponent from "./HeaderComponent";
 
 export default function App() {
@@ -6,7 +6,9 @@ export default function App() {
 
   return (
     <>
-      <h1 className={headerText.length > 5 ? "header" : null}>{headerText}</h1>
+      <h1 className={headerText.length > 5 ? styles.header : null}>
+        {headerText}
+      </h1>
       <HeaderComponent />
     </>
   );
