@@ -1,9 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
+import { AccountProvider } from "./context/accountContext";
 
 test('if $500 is sent, the account balance is updated', async () => {
-    render(<App />);
+    render(<AccountProvider><App /></AccountProvider>);
 
     userEvent.type(screen.getByRole('spinbutton', { name: /transfer amount/i }), '500');
     userEvent.click(screen.getByRole('button', { name: /send/i }));

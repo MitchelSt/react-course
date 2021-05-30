@@ -9,7 +9,6 @@ export default function App() {
     e.preventDefault();
 
     setTimeout(() => {
-      // setAccountBalance((prev) => prev - transferAmount);
       dispatch({ type: "DECREASE_ACCOUNT_BALANCE", payload: transferAmount });
       setTransferAmount(0);
     }, 200);
