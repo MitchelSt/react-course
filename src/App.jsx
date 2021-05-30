@@ -10,7 +10,7 @@ export default function App() {
     setTimeout(() => {
       setAccountBalance((prev) => prev - transferAmount);
       setTransferAmount(0);
-    }, 2000);
+    }, 200);
   };
 
   return (
@@ -21,10 +21,12 @@ export default function App() {
 
       <p>Send money to: John Doe</p>
       <form onSubmit={onSubmit}>
+        <label htmlFor="transferAmount">Transfer Amount</label>
         <br />
         <input
           min="0"
           type="number"
+          id="transferAmount"
           value={transferAmount}
           onChange={(e) => setTransferAmount(e.target.value)}
         />
