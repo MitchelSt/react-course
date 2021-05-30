@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { AccountContext } from "./context/accountContext";
 
-export default function App({ transferToPerson }) {
+export default function App() {
   const { state, dispatch } = useContext(AccountContext);
   const [transferAmount, setTransferAmount] = useState(0);
 
@@ -21,7 +21,7 @@ export default function App({ transferToPerson }) {
 
       <p>Current account balance: {state.balance}</p>
 
-      <p>Send money to: {transferToPerson}</p>
+      <p>Send money to: John Doe</p>
       <form onSubmit={onSubmit}>
         <label htmlFor="transferAmount">Transfer Amount</label>
         <br />
