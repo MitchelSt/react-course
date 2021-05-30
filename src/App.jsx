@@ -22,11 +22,9 @@ export default function App() {
       <p>Send money to: John Doe</p>
       <form onSubmit={onSubmit}>
         <br />
-        <label htmlFor="transferAmount">Transfer Amount</label>
         <input
           min="0"
           type="number"
-          id="transferAmount"
           value={transferAmount}
           onChange={(e) => setTransferAmount(e.target.value)}
         />
