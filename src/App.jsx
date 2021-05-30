@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function App() {
+export default function App({ transferToPerson }) {
   const [accountBalance, setAccountBalance] = useState(5000);
   const [transferAmount, setTransferAmount] = useState(0);
 
@@ -19,7 +19,7 @@ export default function App() {
 
       <p>Current account balance: {accountBalance}</p>
 
-      <p>Send money to: John Doe</p>
+      <p>Send money to: {transferToPerson}</p>
       <form onSubmit={onSubmit}>
         <label htmlFor="transferAmount">Transfer Amount</label>
         <br />
