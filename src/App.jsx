@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 export default function App() {
-  const [authenticated, setAuthenticated] = useState(true);
+  const [authenticated, setAuthenticated] = useState(false);
   const [todoInput, setTodoInput] = useState("");
   const [todos, setTodos] = useState([]);
 
@@ -63,7 +63,7 @@ export default function App() {
             {todos.map((todo) => {
               const { id, title, selected } = todo;
               return (
-                <li key={id}>
+                <li key={id} data-cy={`todo-${title}`}>
                   <label
                     className={selected ? "todoText" : null}
                     htmlFor={`todoToggle${id}`}
