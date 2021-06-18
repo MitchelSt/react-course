@@ -1,6 +1,11 @@
 import React from "react";
-import "./Header.module.scss";
+import "./Header.module.css";
 
 export default function Header() {
-  return <>Header</>;
+  return (
+    <>
+      Header
+      <hr />
+    </>
+  );
 }
