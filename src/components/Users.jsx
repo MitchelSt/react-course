@@ -4,8 +4,6 @@ import useUsers from "../query-hooks/useUsers";
 export default function Users({ setSelectedUser }) {
   const users = useUsers();
 
-  console.log(users);
-
   return (
     <>
       {users.isLoading && <p>Loading users...</p>}
