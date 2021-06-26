@@ -1,7 +1,7 @@
 import React from "react";
 import useUsers from "../query-hooks/useUsers";
 
-export default function Users() {
+export default function Users({ setSelectedUser }) {
   const users = useUsers();
 
   console.log(users);
@@ -15,7 +15,9 @@ export default function Users() {
       {users.isSuccess && (
         <ul>
           {users.data.map((user) => (
-            <li>{user.name}</li>
+            <li key={user.id} onClick={() => setSelectedUser(user.id)}>
+              {user.name}
+            </li>
           ))}
         </ul>
       )}

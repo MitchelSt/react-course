@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider } from "react-query";
+import { QueryClient, QueryClientProvider, useIsFetching } from "react-query";
 import Dashboard from "./pages/Dashboard";
 
 export default function App() {
